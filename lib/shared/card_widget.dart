@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medita_app/screens/meditation_screen/silentmeditation_list.dart';
 import 'package:medita_app/shared/constants.dart';
 
 class MeditationCard extends StatelessWidget {
@@ -12,7 +13,7 @@ class MeditationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, '/SilentList'),
+      onTap: () => _openDetailsPage(context),
       child: Material(
         borderRadius: BorderRadius.circular(10),
         elevation: 15,
@@ -38,4 +39,7 @@ class MeditationCard extends StatelessWidget {
       ),
     );
   }
+
+  _openDetailsPage(BuildContext context) => Navigator.of(context)
+      .push(MaterialPageRoute(builder: (context) => SilentMeditationList()));
 }
