@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:medita_app/screens/meditation_screen/silentmeditation_list.dart';
 import 'package:medita_app/shared/constants.dart';
 
 import '../../shared/card_widget.dart';
@@ -42,6 +43,7 @@ class MeditationScreen extends StatelessWidget {
                       MeditationCard(
                         title: "Zazen Meditation",
                         image: "lib/assets/images/Rectangle.jpg",
+                        route: SilentMeditationList(),
                       ),
                       MeditationCard(
                         title: "Qigong Meditation",

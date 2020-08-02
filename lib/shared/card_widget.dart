@@ -8,7 +8,7 @@ class MeditationCard extends StatelessWidget {
 
   final String title;
   final String image;
-  final String route;
+  final Widget route;
 
   @override
   Widget build(BuildContext context) {
@@ -41,5 +41,5 @@ class MeditationCard extends StatelessWidget {
   }
 
   _openDetailsPage(BuildContext context) => Navigator.of(context)
-      .push(MaterialPageRoute(builder: (context) => SilentMeditationList()));
+      .push(MaterialPageRoute(builder: (context) => route));
 }
