@@ -16,10 +16,22 @@ class DeepMeditationPlayer extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: ScreenSize.height * .1),
-            CircleAvatar(
-              backgroundImage: AssetImage("lib/assets/images/Rectangle-1.jpg"),
-              radius: ScreenSize.height * .13,
-            ),
+            Container(
+                height: ScreenSize.width * .5,
+                width: ScreenSize.width * .5,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 2, color: Colors.white),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 18,
+                        offset: Offset(0, 18),
+                        color: Color(0x20334454),
+                      )
+                    ],
+                    image: DecorationImage(
+                        image: AssetImage("lib/assets/images/Rectangle-3.jpg"),
+                        fit: BoxFit.fill),
+                    shape: BoxShape.circle)),
             SizedBox(height: ScreenSize.height * .08),
             Text(
               "20 Minutes \nDeep Meditation",
@@ -35,6 +47,12 @@ class DeepMeditationPlayer extends StatelessWidget {
                 SvgPicture.asset("lib/assets/images/forward-30.svg"),
               ],
             ),
+            SizedBox(height: ScreenSize.height * .08),
+            Stack(
+              children: <Widget>[
+                SvgPicture.asset("lib/assets/images/waves.svg"),
+              ],
+            )
           ],
         ),
       ),
