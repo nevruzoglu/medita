@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // They should placed in order such as
       // `page 0` will be presented when `item 0` in the [BottomNavigationBar] clicked.
       children: <Widget>[
-        DeepMeditationPlayer(),
+        MeditationScreen(),
         HappyMindScreen(),
         RelaxationScreen(),
       ],

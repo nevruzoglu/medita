@@ -38,7 +38,7 @@ class SilentMeditationList extends StatelessWidget {
                 children: [
                   ListCardWidget(
                     image: "lib/assets/images/Rectangle.jpg",
-                    title: "Weekend Reset",
+                    title: "Deep Meditation",
                   ),
                   ListCardWidget(
                     image: "lib/assets/images/Rectangle-1.jpg",
