@@ -2,7 +2,6 @@ import 'package:custom_navigator/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:medita_app/screens/happymind_screen/happymind_screen.dart';
-import 'package:medita_app/screens/meditation_screen/deepmeditation_payer.dart';
 import 'package:medita_app/screens/meditation_screen/meditation_screen.dart';
 import 'package:medita_app/screens/relaxation/relaxation_screen.dart';
 

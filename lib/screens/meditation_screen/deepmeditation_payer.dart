@@ -12,10 +12,17 @@ class DeepMeditationPlayer extends StatefulWidget {
 }
 
 class _DeepMeditationPlayerState extends State<DeepMeditationPlayer> {
+  var duration = 20.0;
+
+  updateSlider({newDuration}) {
+    setState(() {
+      duration = newDuration;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     ScreenSize().init(context);
-    var duration = 10.0;
 
     return Scaffold(
       body: Center(
@@ -57,20 +64,35 @@ class _DeepMeditationPlayerState extends State<DeepMeditationPlayer> {
               ),
               SizedBox(height: ScreenSize.height * .08),
               Stack(
+                alignment: Alignment.center,
                 children: <Widget>[
                   SvgPicture.asset("lib/assets/images/waves.svg"),
-                  SliderTheme(
-                    data: SliderThemeData(
-                        trackHeight: 6, activeTrackColor: Colors.blue),
-                    child: Slider(
-                        value: duration,
-                        min: 0,
-                        max: 100,
-                        onChanged: (newDuration) {
-                          setState(() {
-                            duration = newDuration;
-                          });
-                        }),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("00:00"),
+                      Container(
+                        width: ScreenSize.width * .7,
+                        child: SliderTheme(
+                          data: SliderThemeData(
+                              trackHeight: 6,
+                              activeTrackColor: Color(0xffC9E084),
+                              inactiveTrackColor: Colors.white,
+                              thumbColor: Color(0xffC9E084),
+                              thumbShape: RoundSliderThumbShape(
+                                  enabledThumbRadius: 10,
+                                  disabledThumbRadius: 10)),
+                          child: Slider(
+                              value: duration,
+                              min: 0,
+                              max: 100,
+                              onChanged: (newDuration) {
+                                updateSlider(newDuration: newDuration);
+                              }),
+                        ),
+                      ),
+                      Text("18:50")
+                    ],
                   )
                 ],
               )
